@@ -48,8 +48,12 @@ padding: 0 48px;
 }
 
 div {
-position: unset !important;
-z-index: 2;
+  position: unset !important;
+  z-index: 2;
+}
+
+.clients:nth-last-child(-n + 4) {
+  border-bottom: none;
 }
 
 .grid-columns-line {
@@ -133,7 +137,7 @@ li {
 
 /*buttons*/
 .btn {
-@apply inline-flex rounded-full items-center justify-center px-5 py-1.5 border border-transparent text-xl focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-gray-500  hover:shadow-sm;
+@apply inline-flex items-center justify-center px-5 py-1.5 border border-transparent text-xl focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-gray-500  hover:shadow-sm;
 }
 
 .btn-primary {
@@ -141,7 +145,7 @@ li {
 }
 
 .btn-secondary {
-@apply text-gray-900 border border-gray-900 hover:bg-gray-100 bg-white
+@apply text-white border border-white hover:bg-gray-100;
 }
 
 .max-w-8xl {

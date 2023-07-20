@@ -13,7 +13,7 @@
     <div class="grid-default pl-12 pr-12 border-t border-b border-gray-900">
 
        {% for client in collections.sortedClients %}
-            <div class="col-span-3 border-r border-b border-gray-900 py-16 px-24 justify-center items- -middle flex">
+            <div class="clients col-span-3 border-r border-b border-gray-900 py-16 px-24 justify-center flex">
                 <img src="{{ client.data.img }}" alt="{{ client.data.name }}">
             </div>
         {% endfor %}

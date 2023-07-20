@@ -1,0 +1,26 @@
+<section id="capabilities">
+    <div class="mt-12 pt-8">
+        <div class="pl-12 pr-12">
+            <div class="col-span-12 lg:col-span-3 mb-6 pl-8 pr-8">
+                <h2 class="text-6xl uppercase font-medium">
+                    Our clients
+                </h2>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="grid-default pl-12 pr-12 border-t border-b border-gray-900">
+
+       {% for client in collections.client %}
+                <div class="col-span-7">
+                        <img src="{{ client.data.logo }}">
+                </div>
+        {% endfor %}
+       
+
+
+    </div>
+    
+
+</section>

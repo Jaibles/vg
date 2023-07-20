@@ -1,0 +1,16 @@
+<li class="sm:py-6">
+    <div class="space-y-4 sm:grid sm:items-start sm:gap-6 sm:space-y-0">
+        <div class="space-y-4">
+            <div class="leading-6 space-y-1">
+                <h4 class="text-xl font-medium text-gray-900 mb-0">{{ team.data.title }}</h4>
+                <span class="text-xl leading-8 text-gray-600 block mt-4">{{ team.data.role }}</span>
+            </div>
+            <p>{{ team.data.about }}</p>
+            {% if team.data.url %}
+            <a href="{{ team.data.url }}" target="_blank" class="text-xl mt-2 inline-block underline-custom">
+                View work
+            </a>
+            {% endif %}
+        </div>
+    </div>
+</li>

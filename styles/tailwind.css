@@ -193,6 +193,9 @@ div {
   }
 }
 
+img.clients {
+  max-width: 160px;
+}
 
 p, 
 li {

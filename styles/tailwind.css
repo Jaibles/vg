@@ -26,9 +26,8 @@
 }
 
 html {
-scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
-
 
 html,
 body {
@@ -38,18 +37,33 @@ body {
   position: relative;
 }
 
+h2 {
+  @apply text-4xl md:text-6xl uppercase font-medium !important;
+}
+
 .font-mono {
   font-family: 'SuisseIntl Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
 }
 
+.outer-margin {
+  @apply pl-6 pr-6 md:pl-8 md:pl-8 xl:pl-12 xl:pr-12
+}
+
+.inner-margin {
+  @apply pl-4 pr-4 lg:pl-8 lg:pr-8
+}
+
+.inner-margin-mobile {
+  @apply pl-8 pr-8 sm:pl-0 sm:pr-0
+}
+
 .grid-columns {
+  @apply outer-margin;
   position: absolute;
-  padding: 0 48px;
   left: 0%;
   top: 0%;
   right: 0%;
   bottom: 0%;
-  z-index: 1;
   display: grid;
   width: 100%;
   grid-auto-columns: 1fr;
@@ -59,6 +73,15 @@ body {
   grid-template-columns: repeat(12, 1fr);
   -ms-grid-rows: auto;
   grid-template-rows: auto;
+}
+@media (max-width: 640px) {
+  .grid-columns {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+.grid-default {
+  @apply grid grid-cols-12 sm:grid-cols-12;
 }
 
 /* GRID LINES */
@@ -73,7 +96,6 @@ body {
 .grid-on-green .grid-columns-line {
   border-right: 1px solid rgba(255, 255, 255, 0.035);
 }
-
 
 .grid-columns-line:first-of-type {
   border-left: 1px solid rgba(0, 0, 0, 1);
@@ -97,26 +119,26 @@ body {
 
 /* END GRID */
 
-.clients:nth-last-child(-n + 4) {
+@media (min-width: 640px) {
+  .clients:nth-last-child(-n + 4) {
+    border-bottom: none;
+  }
+}
+
+.clients:last-child {
   border-bottom: none;
 }
+
 grid {
   height: 100%;
   width: 100%;
   top: 0;
 }
+
 div {
   position: unset;
   z-index: 2;
 }
-
-
-.grid-default {
-  @apply grid grid-cols-12;
-}
-
-
-
 
 
 @tailwind base;
@@ -127,14 +149,12 @@ div {
 .video-container {
   height: 66vh;
 }
-
-
-
-/* @media (min-width: 640px) {
-.proposal h2 {
-  font-size: 40px !important;
+@media (max-width: 640px) {
+  .video-container {
+    height: 48vh;
+  }
 }
-} */
+
 
 p, 
 li {

@@ -1,45 +1,44 @@
-<div class="relative">
-<div class="grid-default bg-black pb-16 relative">
-    <div class="col-span-12 mt-12 pt-8">
-        <div class="pl-12 pr-12 grid grid-cols-12">
-            <div class="col-span-12 lg:col-span-7 mb-6 pl-8 pr-8">
-                <h2 class="text-6xl uppercase text-white font-medium">
-                    Let us help you Find your angle
-                </h2>
-            </div>
+<div class="relative bg-black">
+    <div class="grid-default pb-16 relative">
+        <div class="col-span-12 mt-12 pt-8">
+            <div class="outer-margin grid grid-cols-12">
+                <div class="col-span-12 lg:col-span-7 mb-6 inner-margin">
+                    <h2 class="text-white">
+                        Let us help you Find your angle
+                    </h2>
+                </div>
 
-            <div class="col-span-12 lg:col-span-9 gap-6 flex flex-row items-center mt-4 mb-6 pl-8 pr-8">
-                <p class="text-xl font-medium text-white">
-                    Increase brand affinity
-                </p>
-                <p class="text-xl font-medium text-white">
-                    Build customer loyalty
-                </p>
-                <p class="text-xl font-medium text-white">
-                    Increase conversion
-                </p>
-                <p class="text-xl font-medium text-white">
-                    Reduce ad spend
-                </p>
+                <div class="col-span-12 sm:col-span-11 xl:col-span-9 gap-2 lg:gap-6 flex flex-col sm:flex-row mt-4 mb-6 inner-margin">
+                    <p class="text-xl font-medium text-white">
+                        Increase brand affinity
+                    </p>
+                    <p class="text-xl font-medium text-white">
+                        Build customer loyalty
+                    </p>
+                    <p class="text-xl font-medium text-white">
+                        Increase conversion
+                    </p>
+                    <p class="text-xl font-medium text-white">
+                        Reduce ad spend
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-span-12 lg:col-span-8 outer-margin ">
+            <div class="inner-margin flex flex-col">
+                
+                <div class="flex flex-col mt-8 space-y-4 sm:space-y-0 sm:space-x-4 sm:flex-row lg:mt-8 sm:px-0">
+                    <a data-savvycal-embed class="btn btn-secondary" role="button" href="https://savvycal.com/ciaran/chat">
+                        Book a call
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="col-span-12 lg:col-span-8 pl-12 pr-12 ">
-        <div class="pl-8 pr-8 flex flex-col">
-            
-            <div class="flex flex-col mt-8 space-y-4 sm:space-y-0 sm:space-x-4 sm:flex-row lg:mt-8 sm:px-0">
-                <a data-savvycal-embed class="btn btn-secondary" role="button" href="https://savvycal.com/ciaran/chat">
-                    Book a call
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="bg-black">
-    <div class="pl-12 pr-12 pt-16">
-        <div class="grid-default flex justify-between pt-5 pb-5 pl-8 pr-8 gap-y-3">
+    <div class="outer-margin pt-16">
+        <div class="grid-default flex flex-col sm:flex-row justify-between pt-5 pb-5 inner-margin gap-y-3">
             <div class="order-last lg:order-first col-span-12 lg:col-span-6 flex align-middle items-center">
                 <span class="text-lg text-white uppercase font-mono leading-none">
                     hello@veblengiffen.com
@@ -55,8 +54,8 @@
                 </span>
             </div>
 
-             <div class="order-last lg:order-first col-span-12 lg:col-span-3 flex align-middle items-center">
-                 <ul class="flex gap-4 sm:gap-6 flex items-center align-middle">
+            <div class="order-last lg:order-first col-span-12 lg:col-span-3 flex align-middle items-center">
+                <ul class="flex gap-4 sm:gap-6 flex items-center align-middle">
                     <li>
                         <a href="/" title="" class="leading-none text-lg text-white uppercase font-mono transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80">
                             Terms
@@ -72,9 +71,8 @@
             </div>
         </div>
     </div>
-</div>
 
-<grid class="z-10 grid-on-black absolute top-0 h-full w-full">
-    {% include "component/grid.njk" %}
-</grid>
+    <grid class="grid-on-black absolute top-0 h-full w-full z-0">
+        {% include "component/grid.njk" %}
+    </grid>
 </div>

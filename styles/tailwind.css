@@ -44,7 +44,7 @@ body {
   height: 100%;
   position: absolute;
   z-index: 0;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0.1) 1px, transparent 0);
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 0);
   background-size: 100% 8px;
   width: 100%;
 }
@@ -224,6 +224,7 @@ li {
 
 .btn-secondary {
 @apply text-white border border-white hover:bg-green-500;
+  margin-left: 0 !important;
 }
 
 .site-title {

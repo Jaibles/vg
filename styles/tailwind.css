@@ -98,12 +98,12 @@ h2 {
 
 @media (max-width: 640px) {
   .grid-columns {
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 
 .grid-default {
-  @apply grid grid-cols-12 sm:grid-cols-12;
+  @apply grid grid-cols-6 sm:grid-cols-12;
 }
 
 /* GRID LINES */
@@ -126,9 +126,15 @@ h2 {
 .grid-columns-line:last-of-type {
   border-right: 1px solid rgba(0, 0, 0, 1);
 }
+@media (max-width: 640px) {
+  .grid-columns-line:nth-child(6) {
+    border-right: 1px solid rgba(0, 0, 0, 1);
+  }
+}
+
 
 .grid-on-black .grid-columns-line {
-  border-right: 1px solid rgba(255, 255, 255, 0.20);
+  border-right: 1px solid rgba(255, 255, 255, 0.10);
 }
 
 .grid-on-black .grid-columns-line:first-of-type {
@@ -139,8 +145,11 @@ h2 {
   border-right: 1px solid rgba(255, 255, 255, .5);
 }
 
-
 /* END GRID */
+
+.menu {
+  min-height: 56px;
+}
 
 @media (min-width: 640px) {
   .clients:nth-last-child(-n + 4) {
@@ -148,8 +157,14 @@ h2 {
   }
 }
 
-.clients:last-child {
+.clients:nth-last-child(-n + 2) {
   border-bottom: none;
+}
+
+@media (max-width: 1024px) {
+  .clients:last-child {
+    display: none;
+  }
 }
 
 grid {

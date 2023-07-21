@@ -1,4 +1,4 @@
-<section id="capabilities">
+<section id="ourclients">
     <div class="mt-12 pt-8">
         <div class="pl-12 pr-12">
             <div class="col-span-12 lg:col-span-3 mb-6 pl-8 pr-8">
@@ -13,7 +13,7 @@
     <div class="grid-default pl-12 pr-12 border-t border-b border-gray-900">
 
        {% for client in collections.sortedClients %}
-            <div class="clients col-span-3 border-r border-b border-gray-900 py-16 px-24 justify-center flex">
+            <div class="clients col-span-3 border-r border-b border-gray-900 py-16 px-24 justify-center flex h-52">
                 <img src="{{ client.data.img }}" alt="{{ client.data.name }}">
             </div>
         {% endfor %}

@@ -6,14 +6,9 @@
     </title>
     <meta charset="UTF-8"/>
     <!-- Open graph -->
-    {% if description %}
-        <meta property="og:description" name="description" content="{{description}}"/>
-    {% endif %}
-    {% if title %}
-        <meta property="og:title" name="title" content="{{ title }}">
-    {% else %}
-        <meta property="og:title" name="title" content="C&H  / {{ client }}">
-    {% endif %}
+    <meta property="og:description" name="description" content="{{description}}"/>
+    <meta property="og:title" name="title" content="{{ title }}">
+    
 
     <meta property="og:type" content="article">
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
@@ -24,27 +19,18 @@
 
     <body>
         {% include "component/menu.njk" %}
+        
         {% block content %}
             {{ content | safe }}
         {% endblock %}
-        <grid class="grid-columns">
-            <div id="w-node-013b0a8ef39f-c26fb154" class="grid-columns-line"></div>
-            <div id="w-node-013b0a8ef39f-c26fb154" class="grid-columns-line"></div>
-            <div id="w-node-013b0a8ef39f-c26fb154" class="grid-columns-line"></div>
-            <div id="w-node-013b0a8ef39f-c26fb154" class="grid-columns-line"></div>
-            <div id="w-node-013b0a8ef39f-c26fb154" class="grid-columns-line"></div>
-            <div id="w-node-013b0a8ef39f-c26fb154" class="grid-columns-line"></div>
-            <div id="w-node-013b0a8ef39f-c26fb154" class="grid-columns-line"></div>
-            <div id="w-node-013b0a8ef39f-c26fb154" class="grid-columns-line"></div>
-            <div id="w-node-013b0a8ef39f-c26fb154" class="grid-columns-line"></div>
-            <div id="w-node-013b0a8ef39f-c26fb154" class="grid-columns-line"></div>
-            <div id="w-node-013b0a8ef39f-c26fb154" class="grid-columns-line"></div>
-            <div id="w-node-013b0a8ef39f-c26fb154" class="grid-columns-line"></div>
+
+        {# {% include "section/cta.njk" %} #}
+        {% include "section/footer.njk" %}
+
+        <grid class="-z-10 absolute">
+            {% include "component/grid.njk" %}
         </grid>
 
-        {% include "section/cta.njk" %}
-
-        {% include "section/footer.njk" %}
 
     </body>
 </html>

@@ -1,15 +1,20 @@
 <section id="capabilities">
 
-    <div class="grid-default pl-12 pr-12 border-gray-900 pb-16">
+    <div class="grid-default pl-12 pr-12 border-gray-900 pb-20">
 
        {% for testimonial in collections.testimonial %}
-            <blockquote class="flex flex-col col-span-7 pt-16 px-8 justify-center items- -middle flex">
+            <blockquote class="flex flex-col col-span-8 pt-16 px-8 justify-center items- -middle flex">
+                
                 <p class="uppercase font-medium text-2xl leading-tight mb-4">
-                    {{ testimonial.data.para1 }}
+                    {{ testimonial.data.quote }}
                 </p>
+                <img src="{{ testimonial.data.img }}" class="w-28 mt-4">
                 <figcaption>
-                <p class="font-mono text-lg leading-none uppercase">{{ testimonial.data.person }}</p>
-                <p class="font-mono text-lg leading-none uppercase">{{ testimonial.data.role }}, {{ testimonial.data.client }}</p>
+                {# <p class="font-mono text-lg leading-none uppercase">{{ testimonial.data.person }}</p> #}
+                
+                {% if testimonial.data.role %}
+                    <p class="font-mono text-lg leading-none uppercase">{{ testimonial.data.role }}, {{ testimonial.data.client }}</p>
+                {% endif %}
                 </figcaption>
             </blockquote>
         {% endfor %}

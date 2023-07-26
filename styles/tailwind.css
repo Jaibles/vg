@@ -152,6 +152,13 @@ h2 {
 }
 
 /* END GRID */
+.marketing-number {
+  @apply pl-4 sm:pl-8;
+}
+
+.marketing-title, .marketing-desc {
+  @apply pl-4 sm:pl-8 lg:pl-0;
+}
 
 .menu {
   min-height: 56px;

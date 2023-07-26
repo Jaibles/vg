@@ -67,15 +67,15 @@ h2 {
 }
 
 .outer-margin {
-  @apply pl-6 pr-6 md:pl-8 md:pl-8 xl:pl-12 xl:pr-12
+  @apply pl-4 pr-4 md:pl-8 md:pl-8 xl:pl-12 xl:pr-12
 }
 
 .inner-margin {
-  @apply pl-4 pr-4 lg:pl-8 lg:pr-8
+  @apply pl-4 pr-4 lg:pl-8 lg:pr-8;
 }
 
 .inner-margin-mobile {
-  @apply pl-8 pr-8 sm:pl-0 sm:pr-0
+  @apply pl-4 pr-4 sm:pl-0 sm:pr-0
 }
 
 .grid-columns {
@@ -145,6 +145,12 @@ h2 {
   border-right: 1px solid rgba(255, 255, 255, .5);
 }
 
+@media (max-width: 640px) {
+  .grid-on-black .grid-columns-line:nth-child(6) {
+    border-right: 1px solid rgba(255, 255, 255, .5);
+  }
+}
+
 /* END GRID */
 
 .menu {
@@ -189,7 +195,7 @@ div {
 }
 @media (max-width: 640px) {
   .video-container {
-    height: 44vh;
+    height: 60vh;
   }
 }
 
@@ -232,4 +238,10 @@ li {
 
 .site-title {
   margin-bottom: -2px;
+}
+
+@media (max-width: 640px) {
+  .site-title {
+    margin-bottom: -3px;
+  }
 }

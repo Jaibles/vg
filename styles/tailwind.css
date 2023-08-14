@@ -206,12 +206,7 @@ div {
 
 
 .video-container {
-  height: 66vh;
-}
-@media (max-width: 640px) {
-  .video-container {
-    height: 60vh;
-  }
+  min-height: 68vh;
 }
 
 img.clients-img {

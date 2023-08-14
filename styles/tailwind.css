@@ -160,6 +160,10 @@ h2 {
   @apply pl-4 sm:pl-8 lg:pl-0;
 }
 
+.marketing-desc {
+  line-height: 1.15 !important;
+}
+
 .menu {
   min-height: 56px;
 }

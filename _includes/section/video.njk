@@ -1,23 +1,26 @@
 <div class="relative">
-    <div class="video-container bg-green-500">
-        <div class="">
-            <div class="">
-                <div class="outer-margin grid grid-cols-12">
-                    <div class="col-start-2 col-span-10 lg:col-start-5 lg:col-span-7 flex mt-60 mb-28 flex-col gap-y-8">
-                        <h3 class="text-3xl lg:text-2xl font-medium mt-2 uppercase lg:text-gray-900">
-                            Veblen Giffen is a contemporary communications company with a maniacal focus on the modern craftsmanships of electronic advertising.
-                        </h3>
-                        <p class="text-xl font-medium leading-tight">
-                            To build a maniacally focused electronic only advertising services business which disrupts & rejects an outdated analog model. Through expert craftsmanship in content, social, community, & transformation and an uncompromising support of creators, who have proven quantifiable track records in mastering the métiers of modern marketing, Veblen Giffen is a haven for artistry that ushers brilliant businesses into the next era of the always online, 24-7, global world we live in.
-                        </p>
-                    </div>
-                </div>
+    
+    <div class="video-container justify-center items-center flex bg-green-500">
+        <button class="absolute z-50 font-mono uppercase flex items-center gap-x-2 text-xl" id="playPauseButton">
+            <svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.38623 0.0400391L15.9747 9.04004L0.386231 18.04L0.38623 0.0400391Z" fill="black"/>
+            </svg>
+            Play
+        </button>
+        <div class="z-10 lines-on-green horizontal-lines top-0"></div>
+        
+        <div class="z-10 grid-on-green absolute top-0 w-full h-full border-t border-gray-900">
+            {% include "component/grid.njk" %}
+        </div>
+
+        <div>
+            <div class="-z-0" id="videoContainer" style="display: none;">
+                <video id="videoPlayer">
+                    <source src="/src/images/vg-launch-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
         </div>
     </div>
-    <div class="lines-on-green horizontal-lines top-0"></div>
-
-    <div class="z-1 grid-on-green absolute top-0 w-full h-full border-t border-gray-900">
-        {% include "component/grid.njk" %}
-    </div>
 </div>
+    

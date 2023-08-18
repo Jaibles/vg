@@ -204,9 +204,24 @@ div {
 @tailwind components;
 @tailwind utilities;
 
-
 .video-container {
-  min-height: 68vh;
+    min-height: 60vh;
+}
+@media (min-width: 680px) {
+  .video-container {
+    min-height: 50vh;
+  }
+}
+@media (min-width: 1140px) {
+  .video-container {
+    min-height: 70vh;
+  }
+}
+
+@media (min-width: 1440px) {
+  .video-container {
+    min-height: 80vh;
+  }
 }
 
 img.clients-img {

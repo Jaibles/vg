@@ -37,6 +37,31 @@
         </grid>
 
         </div>
+
+          <script>
+    var playPauseButton = document.getElementById('playPauseButton');
+    var videoContainer = document.getElementById('videoContainer');
+    var videoPlayer = document.getElementById('videoPlayer');
+
+    playPauseButton.addEventListener('click', function() {
+      if (videoPlayer.paused) {
+        videoContainer.style.display = 'block';
+        videoPlayer.play();
+        playPauseButton.textContent = ' ';
+      } else {
+        videoPlayer.pause();
+        playPauseButton.textContent = 'Play';
+      }
+    });
+
+    videoPlayer.addEventListener('play', function() {
+      playPauseButton.textContent = '';
+    });
+
+    videoPlayer.addEventListener('pause', function() {
+      playPauseButton.textContent = 'Play';
+    });
+  </script>
     </body>
 
 </html>

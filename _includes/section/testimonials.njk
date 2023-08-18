@@ -5,7 +5,7 @@
        {% for testimonial in collections.testimonial %}
             <blockquote class="flex flex-col col-span-12 sm:col-span-10 lg:col-span-8 pt-16 px-4 sm:px-8 justify-center items-middle flex">
                 
-                <p class="uppercase font-medium text-2xl leading-tight mb-4">
+                <p class="uppercase font-medium text-2xl leading-tight mb-4 text-justify">
                     {{ testimonial.data.quote }}
                 </p>
                 <img src="{{ testimonial.data.img }}" class="w-28 mt-4">

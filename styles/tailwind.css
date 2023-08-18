@@ -63,7 +63,7 @@ body {
 }
 
 h2 {
-  @apply text-4xl md:text-6xl uppercase font-medium !important;
+  @apply text-3xl sm:text-4xl md:text-6xl uppercase font-medium !important;
   text-align: left;
   -moz-hyphens: auto;
   hyphens: auto;

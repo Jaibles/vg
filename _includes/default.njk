@@ -47,7 +47,7 @@
       if (videoPlayer.paused) {
         videoContainer.style.display = 'block';
         videoPlayer.play();
-        playPauseButton.textContent = 'Stop';
+        playPauseButton.textContent = ' ';
       } else {
         videoPlayer.pause();
         playPauseButton.textContent = 'Play';
@@ -55,7 +55,7 @@
     });
 
     videoPlayer.addEventListener('play', function() {
-      playPauseButton.textContent = 'Stop';
+      playPauseButton.textContent = '';
     });
 
     videoPlayer.addEventListener('pause', function() {

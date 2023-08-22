@@ -6,18 +6,15 @@
                     Brands our team has worked with
                 </h2>
             </div>
-
         </div>
     </div>
 
     <div class="grid-default outer-margin border-t border-b border-gray-900">
-
        {% for client in collections.sortedClients %}
-            <div class="clients col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 border-r-0 sm:border-r border-b border-gray-900 py-12 lg:py-12 px-12 md:px-24 justify-center flex h-48 w-100">
+            <div class="clients col-span-3 md:col-span-4 lg:col-span-3 border-r-0 sm:border-r border-b border-gray-900 py-12 lg:py-12 px-12 md:px-24 justify-center flex h-48 w-100">
                 <img class="clients-img" src="{{ client.data.img }}" alt="{{ client.data.name }}">
             </div>
         {% endfor %}
-
     </div>
     
 

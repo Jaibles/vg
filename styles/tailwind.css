@@ -117,7 +117,12 @@ h3 {
 }
 
 .outer-margin {
-  @apply pl-4 pr-4 md:pl-8 md:pl-8 xl:pl-12 xl:pr-12
+  @apply pl-4 pr-4 md:pl-8 md:pl-8 xl:pl-12 xl:pr-12 !important;
+}
+@media (min-width: 768px) {
+  .outer-margin {
+    padding-left: 1rem !important;
+  }
 }
 
 .inner-margin {
@@ -146,6 +151,12 @@ h3 {
   grid-template-rows: auto;
 }
 
+@media (min-width: 768px) {
+  .grid-columns {
+    padding-left: 1rem !important;
+  }
+}
+
 @media (max-width: 640px) {
   .grid-columns {
     grid-template-columns: repeat(6, 1fr);
@@ -154,6 +165,12 @@ h3 {
 
 .grid-default {
   @apply grid grid-cols-6 sm:grid-cols-12;
+}
+
+@media (min-width: 768px) {
+  .grid-columns {
+    padding-left: 1rem;
+  }
 }
 
 /* GRID LINES */
@@ -229,11 +246,6 @@ h3 {
   border-bottom: none;
 }
 
-@media (max-width: 1024px) {
-  .clients:last-child {
-    display: none;
-  }
-}
 
 grid {
   height: 100%;
@@ -272,12 +284,18 @@ div {
 }
 
 img.clients-img {
-  max-width: 160px;
+  max-width: 100px;
 }
 
-@media (max-width: 640px) {
+@media (min-width: 680px) {
   img.clients-img {
-    max-width: 120px;
+    max-width: 100px;
+  }
+}
+
+@media (min-width: 1140px) {
+  img.clients-img {
+    max-width: 160px;
   }
 }
 
